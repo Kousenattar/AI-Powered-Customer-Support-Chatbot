@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const connectDB = async () => {
-  // If no connection string is provided, skip DB connection so the app can still run
   if (!process.env.MONGODB_URI) {
     console.warn(
       "MONGODB_URI not set — skipping MongoDB connection (uploads will not be saved to DB)."

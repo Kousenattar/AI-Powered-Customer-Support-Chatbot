@@ -1,7 +1,7 @@
 import fs from "fs";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const pdfParse = require("pdf-parse"); // ✅ guaranteed to be a function
+const pdfParse = require("pdf-parse"); 
 
 export async function extractText(filePath) {
   const buffer = fs.readFileSync(filePath);

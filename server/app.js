@@ -4,6 +4,7 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 import adminlogin from './routes/admin_login.js'
 import upload from './routes/uploadDocumetRoutes.js'
+import chat from './routes/chatRoute.js'
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 
 app.use('/',adminlogin)
 app.use('/',upload)
+app.use('/',chat)
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
